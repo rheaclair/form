@@ -6,7 +6,7 @@ let form=document.querySelector("form");
 function validateInput(){
     
     if(email.value.trim()===""){
-        onError(email,"Email cannot be empty");
+        onError(email,"Please enter your email address");
     }else{
         if(!isValidEmail(email.value.trim())){
             onError(email,"Email is not valid");
@@ -17,12 +17,12 @@ function validateInput(){
 
     //password
     if(pwd.value.trim()===""){
-        onError(pwd,"Password cannot be empty");
+        onError(pwd,"Please enter your password");
      }else{
          onSuccess(pwd);
      }
      if(conPwd.value.trim()===""){
-        onError(conPwd,"Password cannot be empty");
+        onError(conPwd,"Please enter your password one more time");
      }else{
          if(pwd.value.trim()!==conPwd.value.trim()){
             onError(conPwd,"Password & Confirm password not matching");
